@@ -8,7 +8,7 @@ const page = () => {
 
     return (
         <div>
-            qr code
+            Generate a QR Code
         </div>
     );
 };
