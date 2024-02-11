@@ -8,6 +8,7 @@ const Page = () => {
   const [numberString, setNumberString] = useState<string>("");
   const [image, setImage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showDownloadButton, setShowDownloadButton] = useState(false);
 
   const handleGenerate = async () => {
     try {
@@ -21,11 +22,19 @@ const Page = () => {
     }
   };
 
-  const imageString = `/be${image}` ;
-
   useEffect(() => {
-    // Add any side effect logic related to the image if needed
+    setShowDownloadButton(!!image); 
   }, [image]);
+
+  const handleDownload = () => {
+    const downloadLink = document.createElement("a");
+    const imagePath = `/assets/images/image-barcode/${image}`;
+    downloadLink.href = imagePath;
+    downloadLink.download = image;
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  };
 
   return (
     <div>
@@ -60,17 +69,22 @@ const Page = () => {
             </p>
             <Image
               src={`/assets/images/image-barcode/${image}`}
-              width={500} 
-              height={300} 
+              width={500}
+              height={300}
               alt="Generated Barcode"
               loading="lazy"
               decoding="async"
               className=" mx-auto"
             />
             <div className="flex justify-center">
-              <button className="bg-slate-900 text-white text-md px-8 py-3 rounded-lg mt-20">
-                Download
-              </button>
+              {showDownloadButton && (
+                <button
+                  onClick={handleDownload}
+                  className="bg-slate-900 text-white text-md px-8 py-3 rounded-lg mt-20"
+                >
+                  Download
+                </button>
+              )}
             </div>
           </div>
         ) : null}
