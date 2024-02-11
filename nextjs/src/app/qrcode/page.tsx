@@ -43,7 +43,7 @@ const Page = () => {
           <p className="text-3xl font-semibold my-12">Generate a QR Code</p>
           <div className="flex flex-col">
             <label className="mb-4 text-gray-600" htmlFor="inputLink">
-              Your number
+              Your link
             </label>
             <input
               className="text-gray-600 text-md border-[1px] p-3 rounded-lg"

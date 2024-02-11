@@ -6,13 +6,13 @@ export default function Home() {
       <div>
         <div className=" w-[80%] mx-auto">
           <p className=" w-[50%] text-6xl font-semibold text-gray-900 mx-auto text-center mt-12">
-            Generate your next AI QR Code in seconds
+            Generate your next QR Code in seconds
           </p>
           <p className=" text-md text-gray-600 mx-auto text-center my-8">
-            QRGPT makes it simple for you to generate cool looking AI QR codes
-            in seconds, completely for free.
+            QRGPT makes it simple for you to generate cool looking QR codes in
+            seconds, completely for free.
           </p>
-          <div className=" flex justify-center mb-48">
+          <div className=" flex justify-center mb-12">
             <Link href={"/barcode"}>
               <button className=" text-sm bg-slate-900 p-2 px-4 text-slate-100 rounded-lg mr-8">
                 Create your Barcode
@@ -21,6 +21,19 @@ export default function Home() {
             <Link href={"/qrcode"}>
               <button className=" text-sm bg-slate-900 p-2 px-4 text-slate-100 rounded-lg">
                 Create your QR code
+              </button>
+            </Link>
+          </div>
+
+          <div className=" flex justify-center mb-48">
+            <Link href={"/decode/barcode"}>
+              <button className=" text-sm border-[1px] p-2 px-4 text-slate-900 border-slate-900 rounded-lg mr-8">
+                Decode your Barcode
+              </button>
+            </Link>
+            <Link href={"/decode/qrcode"}>
+              <button className=" text-sm border-[1px] p-2 px-4 text-slate-900 border-slate-900 rounded-lg">
+                Decode your QR code
               </button>
             </Link>
           </div>
