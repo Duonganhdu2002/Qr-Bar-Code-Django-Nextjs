@@ -40,4 +40,4 @@ def inputLink(request):
     if serializer.is_valid():
         serializer.save()
 
-    return Response({"message": "QR code generated successfully", "image_path": image_path}, status=200)
+    return Response({"message": "QR code generated successfully", "image_path": image_filename}, status=200)
