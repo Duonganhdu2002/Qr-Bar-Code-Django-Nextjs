@@ -9,3 +9,7 @@ class Item(models.Model):
 class Barcode(models.Model):
     image = models.CharField(max_length=100) 
     created = models.DateTimeField(auto_now_add=True)
+    
+class Qrcode(models.Model):
+    image = models.CharField(max_length=100) 
+    created = models.DateTimeField(auto_now_add=True)
