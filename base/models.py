@@ -13,3 +13,12 @@ class Barcode(models.Model):
 class Qrcode(models.Model):
     image = models.CharField(max_length=100) 
     created = models.DateTimeField(auto_now_add=True)
+
+class BarDecode(models.Model):
+    numberString = models.CharField(max_length=100) 
+    created = models.DateTimeField(auto_now_add=True)
+    
+class QrDecode(models.Model):
+    link = models.CharField(max_length=100) 
+    created = models.DateTimeField(auto_now_add=True)
+
