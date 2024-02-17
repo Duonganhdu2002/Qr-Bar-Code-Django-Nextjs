@@ -1,10 +1,13 @@
-"use client";
+'use client'
 
+// Page.tsx
+import { imageUpload } from "@/api/imageUpload";
 import React, { useState, ChangeEvent, useRef } from "react";
 
 function Page() {
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const [notificationSaveImage, setNotificationSaveImage] = useState("")
 
   const handleImageUpload = (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -13,11 +16,22 @@ function Page() {
     }
   };
 
+  const handleSendImage = async () => {
+    try {
+      const result = await imageUpload(selectedImage);
+      setNotificationSaveImage(result.image_filename)
+    } catch (error) {
+      console.error("Error uploading image:", error);
+    }
+  };
+
   const handleButtonClick = () => {
     if (fileInputRef.current) {
       fileInputRef.current.click();
     }
   };
+
+  console.log(notificationSaveImage)
 
   return (
     <div>
@@ -47,7 +61,7 @@ function Page() {
           <p className="text-2xl font-semibold text-center">
             Your number string here
           </p>
-          {/* {selectedImage && (
+          {selectedImage && (
             <div>
               <img
                 src={URL.createObjectURL(selectedImage)}
@@ -55,7 +69,13 @@ function Page() {
                 className="mt-4 rounded-md max-w-full mx-auto"
               />
             </div>
-          )} */}
+          )}
+          <button
+            onClick={handleSendImage}
+            className="bg-slate-900 text-white py-2 px-4 rounded-lg text-sm"
+          >
+            Send Image
+          </button>
         </div>
       </div>
     </div>

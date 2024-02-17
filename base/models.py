@@ -23,4 +23,4 @@ class QrDecode(models.Model):
     created = models.DateTimeField(auto_now_add=True)
 
 class BarCodeImage(models.Model):
-    image = models.ImageField(upload_to='images/', blank=True, null=True)
+    image = models.ImageField(upload_to='barcode/', blank=True, null=True)
