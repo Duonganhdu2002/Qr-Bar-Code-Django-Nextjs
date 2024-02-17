@@ -7,8 +7,10 @@ import { decodeBarcode } from "@/api/bardecode";
 function Page() {
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const [notificationSaveImage, setNotificationSaveImage] = useState<string>("");
+  const [notificationSaveImage, setNotificationSaveImage] =
+    useState<string>("");
   const [userCode, setUserCode] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleImageUpload = (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -17,21 +19,27 @@ function Page() {
     }
   };
 
-  const handleSendImage = async () => {
-    try {
-      const result = await imageUpload(selectedImage);
-      setNotificationSaveImage(result.image_filename);
-    } catch (error) {
-      console.error("Error uploading image:", error);
-    }
-  };
-
   const handleDecode = async () => {
     try {
-      const result = await decodeBarcode(`media/${notificationSaveImage}`);
-      setUserCode(result.numberString);
+      setLoading(true);
+
+      if (selectedImage) {
+        // Tải ảnh lên server
+        const uploadResult = await imageUpload(selectedImage);
+        setNotificationSaveImage(uploadResult.image_filename);
+
+        // Sau khi tải ảnh lên thành công, giải mã barcode
+        const decodeResult = await decodeBarcode(
+          `media/${uploadResult.image_filename}`
+        );
+        setUserCode(decodeResult.numberString);
+      } else {
+        console.error("No image selected.");
+      }
     } catch (error) {
       console.error("Error decoding barcode:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -67,32 +75,37 @@ function Page() {
               </button>
             </label>
           </div>
+          <div className="flex justify-center w-1/2 mt-20">
+            {selectedImage && (
+              <button
+                onClick={handleDecode}
+                className="bg-slate-900 text-white py-2 px-4 rounded-lg text-sm"
+              >
+                Decode Barcode
+              </button>
+            )}
+          </div>
         </div>
         <div className="w-[50%]">
           <p className="text-2xl font-semibold text-center">
             Your number string here
           </p>
           {selectedImage && (
-            <div>
+            <div className="border border-dashed border-slate-900 h-auto mx-auto rounded-md mt-6 w-1/2 flex justify-center items-center">
               <img
                 src={URL.createObjectURL(selectedImage)}
                 alt="Uploaded Barcode"
-                className="mt-4 rounded-md max-w-full mx-auto"
+                className="mt-4 w-[80%] mx-auto"
               />
             </div>
           )}
-          <button
-            onClick={handleSendImage}
-            className="bg-slate-900 text-white py-2 px-4 rounded-lg text-sm"
-          >
-            Send Image
-          </button>
-          <button
-            onClick={handleDecode}
-            className="bg-slate-900 text-white py-2 px-4 rounded-lg text-sm"
-          >
-            Decode Barcode
-          </button>
+          {userCode && (
+            <div>
+              <p className=" text-center text-2xl mt-20 bg-gray-100 rounded-md w-1/2 mx-auto py-2 font-semibold">
+                {userCode}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </div>
