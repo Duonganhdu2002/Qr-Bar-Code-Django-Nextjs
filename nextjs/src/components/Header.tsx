@@ -16,22 +16,15 @@ function Header() {
           />
           <h1 className=" ml-3 font-extrabold text-black text-lg">QrCODE</h1>
         </div>
-        <div className="w-[10%]">
+        <div className="w-[15%]">
           <Link href={"/"}>
             <button className=" text-sm">Homepage</button>
           </Link>
         </div>
-        <div className="w-[15%]">
-          <Link href={"/barcode"}>
+        <div className="w-[25%]">
+          <Link href={"/scan"}>
             <button className=" text-sm bg-slate-900 p-2 px-4 text-slate-100 rounded-lg">
-              Create your Barcode
-            </button>
-          </Link>
-        </div>
-        <div className="w-[15%]">
-          <Link href={"/qrcode"}>
-            <button className=" text-sm bg-slate-900 p-2 px-4 text-slate-100 rounded-lg">
-              Create your QR code
+              Scan Qr code
             </button>
           </Link>
         </div>
