@@ -9,7 +9,7 @@ export const decodeBarcode = async (
 ): Promise<ApiResponse> => {
   try {
     const response: AxiosResponse<ApiResponse> = await axios.post(
-      "http://localhost:8000/barcode/decode/",
+      "http://127.0.0.1:8000/barcode/decode/",
       { user_image: selectedImage }
     );
     return response.data;
