@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import serializer, barcode, qrcode, bardecode, barcodeImage, qrcodeImage
+from .views import serializer, barcode, qrcode, bardecode, barcodeImage
 
 urlpatterns = [
     path('data/', include([
@@ -15,7 +15,6 @@ urlpatterns = [
     ])),
     path('upload/', include([
         path('barcode/', barcodeImage.image_barcode_list, name='image_barcode_list'),
-        path('qrcode/', qrcodeImage.image_qrcode_list, name='image_qrcode_list'),
     ])),
 
 ]
