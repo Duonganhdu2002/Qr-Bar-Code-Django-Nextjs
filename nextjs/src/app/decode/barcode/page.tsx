@@ -54,7 +54,7 @@ function Page() {
 
   return (
     <div>
-      <div className="w-[80%] flex justify-between mx-auto my-16">
+      <div className={`w-[80%] flex justify-between mx-auto my-16 ${selectedImage ? ( userCode ? ("mb-64") : ("mb-72") ) : ("mb-80")}`}>
         <div className="w-[40%]">
           <p className="text-2xl font-semibold">Upload your barcode image</p>
           <div className="border border-dashed border-slate-900 h-44 rounded-md mt-6 w-1/2 flex justify-center items-center">
@@ -87,16 +87,17 @@ function Page() {
           </div>
         </div>
         <div className="w-[50%]">
-          <p className="text-2xl font-semibold text-center">
-            Result
-          </p>
           {selectedImage && (
-            <div className="border border-dashed border-slate-900 h-auto mx-auto rounded-md mt-6 w-1/2 flex justify-center items-center">
-              <img
-                src={URL.createObjectURL(selectedImage)}
-                alt="Uploaded Barcode"
-                className="mt-4 w-[80%] mx-auto"
-              />
+            <div>
+              <p className="text-2xl font-semibold text-center">Result</p>
+
+              <div className="border border-dashed border-slate-900 h-auto mx-auto rounded-md mt-6 w-1/2 flex justify-center items-center">
+                <img
+                  src={URL.createObjectURL(selectedImage)}
+                  alt="Uploaded Barcode"
+                  className="mt-4 w-[80%] mx-auto"
+                />
+              </div>
             </div>
           )}
           {userCode && (
