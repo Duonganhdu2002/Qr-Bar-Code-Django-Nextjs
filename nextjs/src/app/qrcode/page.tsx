@@ -23,7 +23,7 @@ const Page = () => {
   };
 
   useEffect(() => {
-    setShowDownloadButton(!!image); 
+    setShowDownloadButton(!!image);
   }, [image]);
 
   const handleDownload = () => {
@@ -38,7 +38,11 @@ const Page = () => {
 
   return (
     <div>
-      <div className="w-[80%] mx-auto mt-6 mb-44 flex justify-between">
+      <div
+        className={`w-[80%] mx-auto mt-6  ${
+          image ? "mb-28" : "mb-80"
+        } flex justify-between`}
+      >
         <div className="w-[40%]">
           <p className="text-3xl font-semibold my-12">Generate a QR Code</p>
           <div className="flex flex-col">
@@ -65,16 +69,16 @@ const Page = () => {
         ) : image ? (
           <div className="w-[50%]">
             <p className="text-3xl font-semibold my-12 text-center">
-              Your QR code here
+              Your QR code
             </p>
             <Image
               src={`/assets/images/image-qrcode/${image}`}
-              width={500}
-              height={500}
+              width={300}
+              height={300}
               alt="Generated Barcode"
               loading="lazy"
               decoding="async"
-              className=" mx-auto"
+              className=" mx-auto border border-dashed border-slate-900 rounded-md"
             />
             <div className="flex justify-center">
               {showDownloadButton && (

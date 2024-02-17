@@ -88,7 +88,7 @@ function Page() {
         </div>
         <div className="w-[50%]">
           <p className="text-2xl font-semibold text-center">
-            Your number string here
+            Result
           </p>
           {selectedImage && (
             <div className="border border-dashed border-slate-900 h-auto mx-auto rounded-md mt-6 w-1/2 flex justify-center items-center">
@@ -101,7 +101,7 @@ function Page() {
           )}
           {userCode && (
             <div>
-              <p className=" text-center text-2xl mt-20 bg-gray-100 rounded-md w-1/2 mx-auto py-2 font-semibold">
+              <p className=" text-center text-2xl mt-20 bg-gray-100 rounded-md w-fit px-6 mx-auto py-2 font-semibold">
                 {userCode}
               </p>
             </div>

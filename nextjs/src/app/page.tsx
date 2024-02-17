@@ -5,29 +5,29 @@ export default function Home() {
     <main>
       <div>
         <div className=" w-[80%] mx-auto">
-          <p className=" w-[50%] text-6xl font-semibold text-gray-900 mx-auto text-center mt-12">
-            Generate your next QR Code in seconds
+          <p className=" w-[50%] text-6xl font-semibold text-gray-900 mx-auto text-center mt-36">
+            Generate your Barcode or QR Code in seconds
           </p>
-          <p className=" text-md text-gray-600 mx-auto text-center my-8">
-            QRGPT makes it simple for you to generate cool looking QR codes in
+          <p className=" text-md text-gray-600 mx-auto text-center my-24">
+            QrCODE makes it simple for you to generate cool looking QR codes in
             seconds, completely for free.
           </p>
-          <div className=" flex justify-center mb-12">
+          <div className=" flex justify-center mt-28 my-12">
             <Link href={"/barcode"}>
-              <button className=" text-sm bg-slate-900 p-2 px-4 text-slate-100 rounded-lg mr-8">
+              <button className=" text-md bg-slate-900 p-2 px-4 text-slate-100 rounded-lg mr-8">
                 Create your Barcode
               </button>
             </Link>
             <Link href={"/qrcode"}>
-              <button className=" text-sm bg-slate-900 p-2 px-4 text-slate-100 rounded-lg">
+              <button className=" text-md bg-slate-900 p-2 px-4 text-slate-100 rounded-lg">
                 Create your QR code
               </button>
             </Link>
           </div>
 
-          <div className=" flex justify-center mb-48">
+          <div className=" flex justify-center mt-24 mb-48">
             <Link href={"/decode/barcode"}>
-              <button className=" text-sm border-[1px] p-2 px-4 text-slate-900 border-slate-900 rounded-lg mr-8">
+              <button className=" text-lg border-[1px] p-2 px-4 text-slate-900 border-slate-900 rounded-lg mr-8">
                 Decode your Barcode and Qrcode
               </button>
             </Link>
@@ -36,12 +36,12 @@ export default function Home() {
         <hr />
         <div className=" w-[80%] mx-auto">
           <p className=" text-center text-4xl my-24 font-bold text-gray-900">
-            QrGPT is Proudly Open Source
+            QrCODE is Proudly Open Source
           </p>
           <p className=" text-center text-md my-8 text-gray-600">
             Our source code is available on GitHub.
           </p>
-          <Link href={"/"}>
+          <Link href={"https://github.com/Duonganhdu2002"}>
             <div className=" flex bg-slate-900 w-fit p-2 px-4 rounded-lg mx-auto cursor-pointer items-center mb-12">
               <svg
                 aria-hidden="true"

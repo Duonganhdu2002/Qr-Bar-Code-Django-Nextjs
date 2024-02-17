@@ -6,9 +6,9 @@ import React, { useState, useEffect } from "react";
 
 const Page = () => {
   const [numberString, setNumberString] = useState<string>("");
-  const [image, setImage] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [showDownloadButton, setShowDownloadButton] = useState(false);
+  const [image, setImage] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
+  const [showDownloadButton, setShowDownloadButton] = useState<boolean>(false);
 
   const handleGenerate = async () => {
     try {
@@ -38,7 +38,7 @@ const Page = () => {
 
   return (
     <div>
-      <div className="w-[80%] mx-auto mt-6 mb-44 flex justify-between">
+      <div className={`w-[80%] mx-auto mt-6 ${image ? ("mb-44") : ("mb-80")} flex justify-between`}>
         <div className="w-[40%]">
           <p className="text-3xl font-semibold my-12">Generate a Bar Code</p>
           <div className="flex flex-col">
@@ -65,16 +65,16 @@ const Page = () => {
         ) : image ? (
           <div className="w-[50%]">
             <p className="text-3xl font-semibold my-12 text-center">
-              Your bar code here
+              Your bar code
             </p>
             <Image
               src={`/assets/images/image-barcode/${image}`}
-              width={500}
-              height={300}
+              width={400}
+              height={200}
               alt="Generated Barcode"
               loading="lazy"
               decoding="async"
-              className=" mx-auto"
+              className=" mx-auto border border-dashed border-slate-900 py-3 rounded-md"
             />
             <div className="flex justify-center">
               {showDownloadButton && (
