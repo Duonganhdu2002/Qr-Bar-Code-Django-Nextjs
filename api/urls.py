@@ -1,8 +1,5 @@
 from django.urls import path, include
-from .views import serializer 
-from .views import barcode
-from .views import qrcode
-from .views import bardecode
+from .views import serializer, barcode, qrcode, bardecode, barcodeImage
 
 urlpatterns = [
     path('data/', include([
@@ -16,4 +13,8 @@ urlpatterns = [
     path('qrcode/', include([
         path('generate/', qrcode.inputLink),
     ])),
+    path('upload/', include([
+        path('barcode/', barcodeImage.image_barcode_list, name='image_barcode_list'),
+    ])),
+
 ]
