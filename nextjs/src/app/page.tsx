@@ -28,12 +28,7 @@ export default function Home() {
           <div className=" flex justify-center mb-48">
             <Link href={"/decode/barcode"}>
               <button className=" text-sm border-[1px] p-2 px-4 text-slate-900 border-slate-900 rounded-lg mr-8">
-                Decode your Barcode
-              </button>
-            </Link>
-            <Link href={"/decode/qrcode"}>
-              <button className=" text-sm border-[1px] p-2 px-4 text-slate-900 border-slate-900 rounded-lg">
-                Decode your QR code
+                Decode your Barcode and Qrcode
               </button>
             </Link>
           </div>
