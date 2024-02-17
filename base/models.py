@@ -24,3 +24,6 @@ class QrDecode(models.Model):
 
 class BarCodeImage(models.Model):
     image = models.ImageField(upload_to='barcode/', blank=True, null=True)
+
+class QrCodeImage(models.Model):
+    image = models.ImageField(upload_to='qrcode/', blank=True, null=True)
