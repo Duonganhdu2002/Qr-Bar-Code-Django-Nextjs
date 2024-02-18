@@ -70,7 +70,7 @@ const Page: React.FC = () => {
 
             // Nếu có QR code được nhận diện, dừng stream và hiển thị kết quả
             if (code) {
-              stream.getTracks().forEach((track) => track.stop());
+              // stream.getTracks().forEach((track) => track.stop());
               setUserCode(code.data);
             }
 

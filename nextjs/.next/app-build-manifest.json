@@ -11,10 +11,10 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/scan-barcode/page": [
+    "/scan-qrcode/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/scan-barcode/page.js"
+      "static/chunks/app/scan-qrcode/page.js"
     ]
   }
 }

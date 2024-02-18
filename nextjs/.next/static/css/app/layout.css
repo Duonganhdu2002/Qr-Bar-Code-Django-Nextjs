@@ -564,39 +564,6 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.container {
-  width: 100%;
-}
-@media (min-width: 640px) {
-
-  .container {
-    max-width: 640px;
-  }
-}
-@media (min-width: 768px) {
-
-  .container {
-    max-width: 768px;
-  }
-}
-@media (min-width: 1024px) {
-
-  .container {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1280px) {
-
-  .container {
-    max-width: 1280px;
-  }
-}
-@media (min-width: 1536px) {
-
-  .container {
-    max-width: 1536px;
-  }
-}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -705,11 +672,8 @@ video {
 .w-6 {
   width: 1.5rem;
 }
-.w-\[15\%\] {
-  width: 15%;
-}
-.w-\[25\%\] {
-  width: 25%;
+.w-\[10\%\] {
+  width: 10%;
 }
 .w-\[40\%\] {
   width: 40%;
@@ -717,8 +681,8 @@ video {
 .w-\[50\%\] {
   width: 50%;
 }
-.w-\[60\%\] {
-  width: 60%;
+.w-\[70\%\] {
+  width: 70%;
 }
 .w-\[80\%\] {
   width: 80%;
@@ -726,18 +690,6 @@ video {
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
-}
-.w-\[q5\%\] {
-  width: q5%;
-}
-.w-\[10\%\] {
-  width: 10%;
-}
-.w-\[20\%\] {
-  width: 20%;
-}
-.w-\[70\%\] {
-  width: 70%;
 }
 .cursor-pointer {
   cursor: pointer;
