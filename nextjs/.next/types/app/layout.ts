@@ -1,4 +1,4 @@
-// File: C:\Users\Duong\Documents\Qr-code-1\nextjs\src\app\layout.tsx
+// File: C:\Users\Duong\Documents\Qr-code-2\nextjs\src\app\layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

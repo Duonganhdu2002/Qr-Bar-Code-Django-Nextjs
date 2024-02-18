@@ -645,9 +645,6 @@ video {
 .mt-6 {
   margin-top: 1.5rem;
 }
-.mt-8 {
-  margin-top: 2rem;
-}
 .flex {
   display: flex;
 }
@@ -668,9 +665,6 @@ video {
 }
 .h-auto {
   height: auto;
-}
-.min-h-screen {
-  min-height: 100vh;
 }
 .w-1\/2 {
   width: 50%;
@@ -699,12 +693,6 @@ video {
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
-}
-.w-full {
-  width: 100%;
-}
-.max-w-md {
-  max-width: 28rem;
 }
 .cursor-pointer {
   cursor: pointer;
