@@ -727,6 +727,12 @@ video {
   width: -moz-fit-content;
   width: fit-content;
 }
+.w-\[q5\%\] {
+  width: q5%;
+}
+.w-\[10\%\] {
+  width: 10%;
+}
 .cursor-pointer {
   cursor: pointer;
 }

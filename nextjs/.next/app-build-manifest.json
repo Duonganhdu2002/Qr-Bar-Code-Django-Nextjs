@@ -11,15 +11,15 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/scan/page": [
+    "/scan-barcode/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/scan/page.js"
+      "static/chunks/app/scan-barcode/page.js"
     ],
-    "/scan2/page": [
+    "/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/scan2/page.js"
+      "static/chunks/app/not-found.js"
     ]
   }
 }

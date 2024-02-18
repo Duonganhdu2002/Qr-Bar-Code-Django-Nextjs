@@ -1,8 +1,8 @@
 // File: C:\Users\Duong\Documents\Qr-code-2\nextjs\src\app\scan\page.tsx
-import * as entry from '../../../../src/app/scan/page.js'
+import * as entry from '../../../../src/app/scan-qrcode/page.jsx'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../src/app/scan/page.js')
+type TEntry = typeof import('../../../../src/app/scan-qrcode/page.jsx')
 
 // Check that the entry is a valid entry
 checkFields<Diff<{
