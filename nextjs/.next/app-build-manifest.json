@@ -16,10 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/scan/page.js"
     ],
-    "/decode/barcode/page": [
+    "/scan2/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/decode/barcode/page.js"
+      "static/chunks/app/scan2/page.js"
     ]
   }
 }

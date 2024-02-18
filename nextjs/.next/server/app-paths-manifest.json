@@ -1,6 +1,6 @@
 {
   "/page": "app/page.js",
-  "/scan/page": "app/scan/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/decode/barcode/page": "app/decode/barcode/page.js"
+  "/scan/page": "app/scan/page.js",
+  "/scan2/page": "app/scan2/page.js"
 }
