@@ -41,7 +41,7 @@ export default function Home() {
           <p className=" text-center text-md my-8 text-gray-600">
             Our source code is available on GitHub.
           </p>
-          <Link href={"https://github.com/Duonganhdu2002"}>
+          <Link href={"https://github.com/Duonganhdu2002/Qr-code"}>
             <div className=" flex bg-slate-900 w-fit p-2 px-4 rounded-lg mx-auto cursor-pointer items-center mb-12">
               <svg
                 aria-hidden="true"
