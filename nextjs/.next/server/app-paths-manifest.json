@@ -1,0 +1,7 @@
+{
+  "/not-found": "app/not-found.js",
+  "/page": "app/page.js",
+  "/scan/page": "app/scan/page.js",
+  "/barcode/page": "app/barcode/page.js",
+  "/decode/barcode/page": "app/decode/barcode/page.js"
+}
