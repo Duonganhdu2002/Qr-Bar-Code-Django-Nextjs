@@ -1,0 +1,9 @@
+Django>=3.2
+djangorestframework
+django-cors-headers
+qrcode
+pyzbar
+opencv-python
+django-storages
+Pillow
+python-barcode
